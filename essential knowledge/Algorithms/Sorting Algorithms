@@ -1,0 +1,28 @@
+1.Bubble Sort, time complexity O(n^2).
+Basic principal: Compare every element in an array. It has at least 2 for loops, assume the length of an array is n, the first element 
+starts has an index of 0, the last element has an index of n-1, the first loop goes over 0 to n-2, the second goes from 1 to n-1.
+Example: Sort 6,5,2,4,1,3 with bubble sort.
+Code in C++:
+  int a[6]={6,5,2,4,1,3};
+	for(int i=0;i<sizeof(a)/sizeof(a[0]);i++){
+		for(int j=0;j<sizeof(a)/sizeof(a[0])-1;j++){
+			if(a[j]>a[j+1]) swap(a[j],a[j+1]);//swap(a,b) exchanged the values of two elements in an array.
+		}
+	}
+	for(int i=0;i<sizeof(a)/sizeof(a[0]);i++){
+		cout<<a[i]<<" ";
+	}
+Code in Java:
+  for (int i = 0; i < a.length; i++) {
+    for (int j = 0; j < a.length - 1; j++) {
+      if (a[j] > a[j + 1]) {
+        //There is no swap() function in Java, so we use one variable to help us exchange the values.
+        int temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+      }
+    }
+  }
+  for (int i = 0; i < a.length; i++) {
+    System.out.print(a[i] + " ");
+  }
